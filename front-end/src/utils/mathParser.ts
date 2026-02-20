@@ -7,6 +7,13 @@ import { create, all } from 'mathjs'
 
 const math = create(all)
 
+// Disable side-effect operations that could modify the shared math instance
+// or execute non-mathematical code from user-supplied expressions.
+math.import(
+  { import: () => { throw new Error('import is not allowed') } },
+  { override: true }
+)
+
 export interface ParseResult {
   evaluate: (x: number) => number
   error?: string
