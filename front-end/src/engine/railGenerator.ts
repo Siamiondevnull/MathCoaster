@@ -35,7 +35,9 @@ export function createRailBody(
   const transform = createCoordinateTransform(transformConfig)
 
   const vertices: Vec2[] = []
-  for (let x = config.xMin; x <= config.xMax; x += config.step) {
+  const steps = Math.round((config.xMax - config.xMin) / config.step)
+  for (let i = 0; i <= steps; i++) {
+    const x = config.xMin + i * config.step
     const y = evaluate(x)
     if (!Number.isFinite(y)) continue
     const physics = transform.mathToPhysics(x, y)
