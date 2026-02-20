@@ -1,0 +1,28 @@
+---
+description: Core coding standards for MathCoaster project
+alwaysApply: true
+---
+
+# MathCoaster Project Rules
+
+## Language in Code
+
+**Use only English in code and in code literals.**
+
+- Variable names, function names, class names → English
+- String literals in code → English
+- Comments in code → English
+- Error messages, logs, UI text in source → English
+- File names for source code → English
+
+```typescript
+// ❌ BAD
+const имяПользователя = "Пользователь";
+throw new Error("Ошибка загрузки");
+
+// ✅ GOOD
+const userName = "User";
+throw new Error("Load error");
+```
+
+**Exception:** User-facing localization (i18n) strings for the application UI may use translated text and should be kept in locale files, not hardcoded.
