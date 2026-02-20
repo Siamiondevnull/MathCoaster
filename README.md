@@ -59,12 +59,6 @@ MathCoaster combines **mathematical functions** with **physics simulation**. You
 One command to build and run frontend and backend:
 
 ```bash
-./run.sh
-```
-
-Or manually:
-
-```bash
 docker compose up --build -d
 ```
 
