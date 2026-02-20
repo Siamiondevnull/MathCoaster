@@ -1,5 +1,6 @@
 # MathCoaster
 
+If you lazy you can check at https://mathcoaster.fly.dev/ :)
 A physics-based puzzle game that will remind you of your algebra class. Build a roller coaster by writing math — define the rail as `y = f(x)`, then watch the ball roll under gravity.
 
 ---
